@@ -1,0 +1,28 @@
+{
+	"name": "ai-discord-bot",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"check": "pnpm check:format && pnpm check:lint",
+		"check:format": "prettier . --check",
+		"check:lint": "eslint **/*.ts",
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev --remote",
+		"format": "prettier . --write",
+		"start": "wrangler dev --remote"
+	},
+	"devDependencies": {
+		"@cloudflare/ai": "^1.0.30",
+		"@cloudflare/workers-types": "^4.20230419.0",
+		"@typescript-eslint/eslint-plugin": "^6.11.0",
+		"discord-api-types": "^0.37.63",
+		"eslint": "^8.54.0",
+		"eslint-plugin-import": "^2.29.0",
+		"eslint-plugin-unused-imports": "^3.0.0",
+		"prettier": "^3.1.0",
+		"prettier-plugin-packagejson": "^2.4.6",
+		"typescript": "^5.0.4",
+		"wrangler": "^3.0.0"
+	}
+}

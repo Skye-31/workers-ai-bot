@@ -1,0 +1,10 @@
+name = "ai-discord-bot"
+main = "src/index.ts"
+compatibility_date = "2023-10-30"
+
+[ai]
+binding = "AI" # i.e. available in your Worker on env.AI
+
+[vars]
+clientID = "1175151112102367292"
+publicKey = "9a3d558e42d0f0354b50e64e33fdddecd2eaff19a3b84d5ec98bae334d0e5111"

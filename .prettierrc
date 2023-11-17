@@ -1,0 +1,15 @@
+{
+	"printWidth": 140,
+	"singleQuote": true,
+	"semi": true,
+	"useTabs": true,
+	"plugins": ["prettier-plugin-packagejson"],
+	"overrides": [
+		{
+			"files": ".prettierc",
+			"options": {
+				"parser": "json"
+			}
+		}
+	]
+}
