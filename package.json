@@ -14,15 +14,15 @@
 	},
 	"devDependencies": {
 		"@cloudflare/ai": "^1.0.47",
-		"@cloudflare/workers-types": "^4.20240117.0",
+		"@cloudflare/workers-types": "^4.20240925.0",
 		"@typescript-eslint/eslint-plugin": "^6.19.1",
-		"discord-api-types": "^0.37.67",
+		"discord-api-types": "^0.37.101",
 		"eslint": "^8.56.0",
 		"eslint-plugin-import": "^2.29.1",
 		"eslint-plugin-unused-imports": "^3.0.0",
-		"prettier": "^3.2.4",
-		"prettier-plugin-packagejson": "^2.4.9",
-		"typescript": "^5.3.3",
-		"wrangler": "^3.24.0"
+		"prettier": "^3.3.3",
+		"prettier-plugin-packagejson": "^2.5.2",
+		"typescript": "^5.6.2",
+		"wrangler": "^3.79.0"
 	}
 }

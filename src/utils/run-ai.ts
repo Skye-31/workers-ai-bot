@@ -1,15 +1,10 @@
-import { Ai } from '@cloudflare/ai';
-
-export default async function runAI(binding: unknown, input: string) {
-	const ai = new Ai(binding);
-
+export default async function runAI(binding: Ai, input: string) {
 	const inputs = {
 		prompt: input.slice(0, 256),
 	};
 
-	console.log('RUNNING AI');
-	const response = await ai.run('@cf/stabilityai/stable-diffusion-xl-base-1.0', inputs);
-	console.log('RAN AI');
+	const stream = await binding.run('@cf/stabilityai/stable-diffusion-xl-base-1.0', inputs) as unknown as ReadableStream<Uint8Array>;
 
-	return response;
+	const arrayBuffer = await new Response(stream).arrayBuffer();
+    return new Uint8Array(arrayBuffer);
 }

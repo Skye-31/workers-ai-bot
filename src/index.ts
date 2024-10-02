@@ -7,7 +7,7 @@ import { verify } from './utils/verify';
 import type { APIInteraction } from 'discord-api-types/v10';
 
 export interface Env {
-	AI: unknown;
+	AI: Ai;
 	clientID: string;
 	publicKey: string;
 }

@@ -87,7 +87,13 @@ export default async function handleApplicationCommand(interaction: APIApplicati
 				} as RESTPostAPIWebhookWithTokenJSONBody),
 			);
 
-			console.log('RETURNING RESPONSE');
+			console.log('RETURNING RESPONSE', {
+				blobSize: blob.size,
+				blobType: blob.type,
+				byteLen: response.byteLength,
+				// @ts-expect-error not typed
+				className: response?.__proto__?.constructor?.toString?.(),
+			});
 			const res = await fetch(`${RouteBases.api}${Routes.webhookMessage(env.clientID, interaction.token, '@original')}`, {
 				method: 'PATCH',
 				body: formData,
